@@ -15,7 +15,9 @@ spec:
           - "curl"
           - "-X"
           - "POST"
-          - "--data-urlencode"
+          - "-H"
+            "'Content-Type: application/json'"
+          - "--data"
           - "{\"app\": \"got-dev\", \"repo\": \"https://github.com/DennisD2/got-dev.git\", \"branch\": \"main\", \"reason\": \"postSyncSuccess\"}"
           - "http://192.168.178.44:8080/postSync"
       restartPolicy: Never
