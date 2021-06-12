@@ -16,7 +16,7 @@ spec:
           - "-X"
           - "POST"
           - "--data-urlencode"
-          - "payload={\"app\": \"got-dev\", \"repoUrl\": \"https://github.com/DennisD2/got-dev.git\", \"branch\": \"main\", \"reason\": \"postSyncSuccess\"}"
+          - "{\"app\": \"got-dev\", \"repo\": \"https://github.com/DennisD2/got-dev.git\", \"branch\": \"main\", \"reason\": \"postSyncSuccess\"}"
           - "http://192.168.178.44:8080/postSync"
       restartPolicy: Never
   backoffLimit: 2
