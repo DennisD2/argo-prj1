@@ -16,7 +16,7 @@ spec:
           - "-X"
           - "POST"
           - "-H"
-            "'Content-Type: application/json'"
+          - "'Content-Type: application/json'"
           - "--data"
           - "{\"app\": \"got-dev\", \"repo\": \"https://github.com/DennisD2/got-dev.git\", \"branch\": \"main\", \"reason\": \"postSyncSuccess\"}"
           - "http://192.168.178.44:8080/postSync"
