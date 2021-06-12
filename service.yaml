@@ -1,23 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    description: The application's endpoint ports
-  labels:
-    app: testapp1
-  name: testapp1
+  name: got-dev-service
 spec:
-  ports:
-  - name: 80-tcp
-    port: 80
-    protocol: TCP
-    targetPort: 80
-  - name: 443-tcp
-    port: 443
-    protocol: TCP
-    targetPort: 443
   selector:
-    app: testapp1
-    deploymentconfig: testapp1
-  sessionAffinity: None
-  type: ClusterIP
+    app: got-dev
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

@@ -9,14 +9,14 @@ spec:
   template:
     spec:
       containers:
-      - name: wh-notification
+      - name: got-dev-postSync-notification
         image: curlimages/curl
         command:
           - "curl"
           - "-X"
           - "POST"
           - "--data-urlencode"
-          - "payload={\"app\": \"got-dev\", \"repoUrl\": \"https://github.com/DennisD2/got-dev.git\", \"branch\": \"main\", \"text\": \"App Sync succeeded\"}"
+          - "payload={\"app\": \"got-dev\", \"repoUrl\": \"https://github.com/DennisD2/got-dev.git\", \"branch\": \"main\", \"reason\": \"postSyncSuccess\"}"
           - "http://192.168.178.44:8080/postSync"
       restartPolicy: Never
   backoffLimit: 2
