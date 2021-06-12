@@ -9,7 +9,7 @@ spec:
   template:
     spec:
       containers:
-      - name: got-dev-postSync-notification
+      - name: got-dev-postsync-notification
         image: curlimages/curl
         command:
           - "curl"
